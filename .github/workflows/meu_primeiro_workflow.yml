@@ -1,0 +1,21 @@
+# nome workflow
+name: Meu primeiro workflow
+on: workflow_dispatch
+# para cada job, especificamos nome, runner e seus steps
+jobs:
+  primeiro_job:
+    runs-on: ubuntu_latest
+    # coleção de steps desse job
+    steps:
+      # primeiro step
+      - name: Hello github actions!
+        run: echo "Hello Github Actions!"
+      # segundo step
+      - name: Qual diretorio atual?
+        run: pwd
+      # terceiro step
+      - name: qual o conteudo do diretorio atual, incluindo arquivos ocultos?
+        run: ls -a
+      # quarto step
+      - name: Até mais!
+        run: echo "See you, Github Actions!"
